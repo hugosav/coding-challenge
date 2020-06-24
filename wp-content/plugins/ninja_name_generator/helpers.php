@@ -37,7 +37,20 @@ function name_generator($request) {
   $wiki_results = query_wikipedia_api($args);
 
   //Define an array of words related to ninja
-  $ninja_words = array('ninja','shuriken','martial+arts',"nunchaku",'bruce+lee','dragon');
+  $ninja_words = array(
+                  'ninja',
+                  'shuriken',
+                  'martial+arts',
+                  "nunchaku",
+                  'dragon',
+                  'samurai',
+                  'sword',
+                  'katana',
+                  'sumo',
+                  'shadow',
+                  'ninja+warrior',
+                  'mystic',
+                  );
 
   /*
     Random array key to select ninja word 
@@ -127,15 +140,13 @@ function generate_ninja_names($user_word_bank, $ninja_word_bank) {
   }
 
   //Create different name variation based on the selected words
-  $name["ninja_name_1"] = "The $random_firstname of the $random_ninja";
-  $name["ninja_name_2"] = "The $random_firstname $random_lastname of the $random_ninja";
-  $name["ninja_name_3"] = "Master $random_firstname  of the $random_ninja";
-  $name["ninja_name_4"] = "The $random_lastname $random_ninja_2 of $random_ninja";
-  $name["ninja_name_5"] = "Master $random_lastname of $random_ninja_2";
-  $name["ninja_name_6"] = "Master $random_ninja $random_lastname";
-  $name["ninja_name_7"] = "The $random_ninja in $random_firstname";
-  $name["ninja_name_8"] = "$random_ninja_2 $random_firstname $random_ninja";
-  $name["ninja_name_9"] = "$random_ninja_1 $random_lastname $random_ninja_2";
+  $name["ninja_name_1"] = "The $random_firstname of $random_ninja";
+  $name["ninja_name_2"] = "The $random_firstname of $random_ninja_2";
+  $name["ninja_name_3"] = "Master $random_firstname $random_ninja";
+  $name["ninja_name_4"] = "Master $random_lastname $random_ninja_2";
+  $name["ninja_name_7"] = "The $random_firstname $random_ninja";
+  $name["ninja_name_8"] = "The $random_ninja_2 $random_firstname $random_ninja";
+  $name["ninja_name_9"] = " Master $random_ninja $random_lastname $random_ninja_2";
   
   //Select a random name from $name array
   $random_name = array_rand($name, 1);

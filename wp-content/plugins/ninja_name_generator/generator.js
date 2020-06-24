@@ -55,7 +55,7 @@ function checkInput (input) {
 
    //if it's a success we sendRequest with konami as a parameter
    if (input == konami) {
-      jQuery("#buzzwords").val("konami");
+      jQuery("#buzzwords").val("konami+street_fighter");
       sendRequest("konami");
    }
        
