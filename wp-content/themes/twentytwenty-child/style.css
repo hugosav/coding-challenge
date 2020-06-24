@@ -150,7 +150,7 @@ body {
 
 #result {
 	color:#fff;
-	margin-top: 50px;
+	margin-top: 15px;
 }
 
 @supports ( font-variation-settings: normal ) {
@@ -322,7 +322,7 @@ main {
 	}
 }
 #send {
-	margin-top: 30px;
+	margin-top: 15px;
 	background: #D25151;
 }
 
@@ -6513,7 +6513,6 @@ a.to-the-top > * {
 .alert {
 	padding: 15px 20px;
 	background: lightgrey;
-	display: none;
 	margin-bottom: 30px;
 	border-radius: 15px;
 }

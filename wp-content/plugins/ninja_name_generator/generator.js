@@ -40,6 +40,7 @@ function sendRequest (user_entry) {
          },
          success: function(response) {
             if(response.ninja_name) {
+               jQuery('#intro').html("Your ninja name is: <div id='result'></div>");
                jQuery('#result').html(response.ninja_name);
             }
             else {

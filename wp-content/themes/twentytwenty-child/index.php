@@ -21,14 +21,14 @@ get_header();
 
 <h1>Ninja Name generator</h1>
 
-<div class="alert"></div>
+<div class="alert">To generate a ninja name enter some words separated by space and press send</div>
 
 <input type="text" id="buzzwords">
 <?php
     $link = admin_url('admin-ajax.php?action=name_generator&nonce='.$nonce);
-    echo '<button id="send" class="name_generator" data-nonce="' . $nonce . '" href="' . $link . '">Envoyer</button>';
+    echo '<button id="send" class="name_generator" data-nonce="' . $nonce . '" href="' . $link . '">Send</button>';
 ?>
-<div id='result'></div>
+<div id="intro" style="color:#fff; margin-top:15px;"></div>
 </main><!-- #site-content -->
 
 </script>
