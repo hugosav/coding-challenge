@@ -39,8 +39,8 @@ function sendRequest (user_entry) {
             xhr.setRequestHeader('X-WP-Nounce', name_generator.restNounce);
          },
          success: function(response) {
-            if(response.ninja_name) {
-               jQuery('#intro').html("Your ninja name is: <div id='result'></div>");
+            if(response) {
+               jQuery('#intro').html("Your ninja name is:");
                jQuery('#result').html(response.ninja_name);
             }
             else {
