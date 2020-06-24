@@ -30,6 +30,7 @@ jQuery(document).ready( function() {
 
 //Send request to the api
 function sendRequest (user_entry) {
+   if(user_entry != "") {
       jQuery.ajax({
          type : "get",
          dataType : "json",
@@ -38,14 +39,19 @@ function sendRequest (user_entry) {
             xhr.setRequestHeader('X-WP-Nounce', name_generator.restNounce);
          },
          success: function(response) {
-            if(response) {
+            if(response.ninja_name) {
                jQuery('#result').html(response.ninja_name);
             }
             else {
-               jQuery(".alert").html("An error has occured while creating your ninja name try again or set new search terms").css('display','block');;
+               jQuery(".alert").html("An error has occured while creating your ninja name try again or set new search terms").css('display','block');
             }
          }
       }) 
+   }
+   else {
+      jQuery(".alert").html("Search field is empty").css('display','block');
+
+   }
 }
 
 
@@ -55,8 +61,8 @@ function checkInput (input) {
 
    //if it's a success we sendRequest with konami as a parameter
    if (input == konami) {
-      jQuery("#buzzwords").val("konami+street_fighter");
-      sendRequest("konami");
+      jQuery("#buzzwords").val("konami");
+      sendRequest("konami+street_fighter");
    }
        
 }
